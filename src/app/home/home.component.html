@@ -3,7 +3,7 @@
     <img src="../../assets/shuffle.svg" width="87.24px" />
     <h1>Não sabe o que assistir?</h1>
   </div>
-  <app-loading *ngIf="isFetching">Loading...</app-loading>
+  <app-loading *ngIf="isFetching" />
   <app-movie-card
     *ngIf="!isFetching"
     [movie]="movie"
