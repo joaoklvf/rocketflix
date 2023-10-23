@@ -3,7 +3,11 @@
     <img src="../../assets/shuffle.svg" width="87.24px" />
     <h1>Não sabe o que assistir?</h1>
   </div>
-  <app-movie-card [movie]="movie" [showDefaultValue]="isMovieRequested" class="w-100">
+  <app-movie-card
+    [movie]="movie"
+    [showDefaultValue]="isMovieRequested"
+    class="w-100"
+  >
   </app-movie-card>
   <button class="button btn-find-movie" (click)="getRandomMovie()">
     <img src="../../assets/shuffle.svg" width="36px" />

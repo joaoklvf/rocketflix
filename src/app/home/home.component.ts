@@ -1,5 +1,10 @@
+// Angular
 import { Component } from '@angular/core';
+
+// Services
 import { MovieService } from '../services/movie.service';
+
+// Interfaces
 import { MovieData } from 'src/interfaces/movie';
 
 @Component({
@@ -16,7 +21,8 @@ export class HomeComponent {
   getRandomMovie() {
     this.movieService.getRandomMovie().subscribe(movieResponse => {
       this.isMovieRequested = true;
-      this.movie = movieResponse?.id ? movieResponse : null;
+      this.movie = movieResponse?.id ?
+        movieResponse : null;
     })
   }
 }

@@ -1,7 +1,13 @@
-import { Component, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+// Angular
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+
+// API
 import { IMG_URL } from 'api';
+
+// Interfaces
 import { MovieData } from 'src/interfaces/movie';
 
+// Constants
 const DEFAULT_IMAGE_PATH = '../../assets/default.png';
 
 @Component({
@@ -16,14 +22,9 @@ export class MovieCardComponent implements OnChanges {
   imagePath: string = DEFAULT_IMAGE_PATH;
   imageAlt: string = 'Code time';
 
-  getImagePath() {
-    return this.movie ?
-      `${IMG_URL}${this.movie.poster_path}` : DEFAULT_IMAGE_PATH;
-  }
-
   ngOnChanges(changes: SimpleChanges) {
     const movie = changes['movie']?.currentValue;
-    
+
     if (movie) {
       this.imagePath = `${IMG_URL}${movie.poster_path}`;
       this.imageAlt = movie.title;
