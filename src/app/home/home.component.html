@@ -1,1 +1,18 @@
-<p>home works!</p>
+<div class="home-container">
+  <div class="div-header">
+    <img src="../../assets/shuffle.svg" width="87.24px" />
+    <h1>Não sabe o que assistir?</h1>
+  </div>
+  <div class="main-card">
+    <app-movie-card [movie]="movie" [showDefaultValue]="isMovieRequested">
+    </app-movie-card>
+  </div>
+  <button class="button btn-find-movie" (click)="getRandomMovie()">
+    <img src="../../assets/shuffle.svg" width="36px" />
+    Encontrar filme
+  </button>
+  <p class="sub-title">
+    Clique em "Encontrar filme" que traremos informações <br />
+    de algum filme para você assistir hoje.
+  </p>
+</div>
