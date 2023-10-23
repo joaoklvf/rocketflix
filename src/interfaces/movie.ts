@@ -1,7 +1,7 @@
 export interface MovieData {
   adult: boolean;
   backdrop_path: string;
-  belongs_to_collection: null | any; // Replace 'any' with a more specific type if needed
+  belongs_to_collection: null | any;
   budget: number;
   genres: Genre[];
   homepage: string;
@@ -33,7 +33,7 @@ interface Genre {
 
 interface ProductionCompany {
   id: number;
-  logo_path: null | string; // Replace 'null' with 'string' if needed
+  logo_path: null | string;
   name: string;
   origin_country: string;
 }
