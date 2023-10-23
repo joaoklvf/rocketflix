@@ -1,16 +1,11 @@
 <div class="main-card" *ngIf="movie || showDefaultValue">
   <div class="picture-box">
-    <img
-      [src]="getImagePath()"
-      alt="{{ getImageAlt() }}"
-      width="171"
-      height="243.77"
-    />
-    <p *ngIf="movie">Nota {{ movie.vote_average }}</p>
+    <img [src]="imagePath" alt="{{ imageAlt }}" width="171" height="243.77" />
+    <p *ngIf="movie">Avaliação {{ movie.vote_average }}</p>
   </div>
   <div *ngIf="movie">
     <h3>{{ movie.title }}</h3>
-    <p>{{ movie.overview || 'Sinopse não disponível em português :(' }}</p>
+    <p>{{ movie.overview || "Sinopse não disponível em português :(" }}</p>
   </div>
   <h3 *ngIf="!movie && showDefaultValue">
     Ops, hoje não é dia de assistir filme. <br />
