@@ -1,5 +1,3 @@
-// Substitua o CHAVE_DA_API com a chave gerada no site.
-
 import { Observable, of } from "rxjs";
 
 export const API_KEY = 'api_key=dda31cfe5bf9eb6ef49ab1d2aad0d456';
