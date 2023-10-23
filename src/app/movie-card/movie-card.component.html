@@ -10,7 +10,7 @@
   </div>
   <div *ngIf="movie">
     <h3>{{ movie.title }}</h3>
-    <p>{{ movie.overview }}</p>
+    <p>{{ movie.overview || 'Sinopse não disponível em português :(' }}</p>
   </div>
   <h3 *ngIf="!movie && showDefaultValue">
     Ops, hoje não é dia de assistir filme. <br />
